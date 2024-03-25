@@ -1,12 +1,148 @@
-<!DOCTYPE html >
+	<!DOCTYPE html >
 <html lang ="en">
 <meta charset =  "UTF-8">
 
 <head>
 	<title> Shop </title>
+	<style>
+		h1{
+			color: #042912;
+			font-size: 50px;
+			font-family: Lucida Handwriting;
+			text-align: center;
+
+		}
+		body { 
+			font-family : sans sans-serif, ;
+			background-color:#0D5A3E;
+			margin: 0px 0px 0px 15px;
+
+		}
+		.products{
+			background-color :#C3BC0D;
+			margin: 70px 60px 0 0;
+			height: 350px;
+			width: 200px;
+			float:left;
+			padding: 3px ;
+		}
+		.item {
+			font-family: Papyrus;
+			text-align: center;
+			font-size:20px;
+			color:#FFFF;
+			padding: 5px;
+			margin: 30px 50px 0 50px;
+		}
+		#green , #bamboo,#toiletroll {
+			margin: 30px 45px 0 40px;
+			padding: 6px;
+		}
+
+		.price {
+			font-family: copperlate;
+			text-align: center;
+			font-size:20px;
+			color:#000000;
+			margin: 10px 50px 0 50px;
+		}
+		.addButton {
+			background-color:#2E9654 ;
+			padding: 3px;
+			margin: 10px 10px 0 57px;
+		
+
+	</style>
+
 </head>
-
+	<h1> Shop </h1>
 <body>
-</body>
-
-</html>
+	<div class = "products">
+	  <img src = "banana.jpeg" alt = "A banana with fairtrade logo" width="200"  height="200" >
+	  <div class="item"> Banana </div>
+	  <div class = "price"> &#163; 7 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBanana">
+	  </form>
+	</div>  
+	<div class = "products" >
+	 <img src = "flowers.jpeg" alt = "A flower with fairtrade logo" width="200"  height="200" >	
+	 <div class = "item"> Flowers </div>
+	 <div class = "price"> &#163; 6</div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addFlowers">
+	  </form>	 
+	</div>
+	<div class = "products">  
+	 <img src = "coffee.jpeg" alt = "A coffee with fairtrade logo" width="200" height="200" >
+	 <div class = "item" > Coffee </div>
+	 <div class = "price"> &#163; 8</div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addCoffee">
+	  </form>
+	</div>
+	 <div class = "products">  
+	 <img src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="200" height="200" >
+	 <div class = "item"> Blue Shirt </div>
+	<div class = "price"> &#163; 10 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBlue">
+	  </form>	
+    </div>
+     <div class = "products">  
+	 <img src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="200" height="200" >
+	 <div class = "item"  id = "green"> Green Shirt </div>
+	 <div class = "price"> &#163; 10</div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addGreen">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "products">  
+	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="200" height="200" >
+	 <div class = "item"> Red Shirt </div>
+	 <div class= "price"> &#163; 10 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "products">  
+	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="200" height="200" >
+	 <div class = "item"> Reusable Toilet Roll </div>
+	 <div class= "price"> &#163; 2 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addRoll">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "products">  
+	 <img src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="200" height="200" >
+	 <div class = "item"> Ecobag </div>
+	 <div class= "price"> &#163; 5 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBag">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "products">  
+	 <img src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="200" height="200" >
+	 <div class = "item" id = "bamboo"> Bamboo Gift Set </div>
+	 <div class= "price"> &#163; 15 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBamboo">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "products" >  
+	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="200" height="200" >
+	 <div class = "item" id = "toiletroll"> Red Shirt </div>
+	 <div class= "price"> &#163; 10 </div>
+	  <form>
+		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
+	  </form>	
+    </div>	 
+    </div>
+    <div class = "basket"> Your Basket: </div>
+    </div>
+    <form>
