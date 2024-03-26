@@ -20,11 +20,14 @@
 		}
 		.products{
 			background-color :#C3BC0D;
-			margin: 70px 60px 0 0;
-			height: 350px;
-			width: 200px;
+			margin: 70px 50px 0 0;
+			height: 450px;
+			width: 300px;
 			float:left;
 			padding: 3px ;
+			border-style: double;
+			border-color:darkgreen;
+			align-content: center;
 		}
 		.item {
 			font-family: Papyrus;
@@ -32,10 +35,10 @@
 			font-size:20px;
 			color:#FFFF;
 			padding: 5px;
-			margin: 30px 50px 0 50px;
+			margin: 20px 40px 0 40px;
 		}
-		#green , #bamboo,#toiletroll {
-			margin: 30px 45px 0 40px;
+		#green {
+			margin: 20px 45px 0 40px;
 			padding: 6px;
 		}
 
@@ -44,29 +47,72 @@
 			text-align: center;
 			font-size:20px;
 			color:#000000;
-			margin: 10px 50px 0 50px;
+			margin: 5px 40px 0 40px;
 		}
 		.addButton {
 			background-color:#2E9654 ;
+			font-family: Courier New;
+			font-size: 15px;
+			width: 150px;
+			height:35px;
 			padding: 3px;
-			margin: 10px 10px 0 57px;
-		
+			margin: 15px 10px 0px 80px;
+		}
+		.price2 {
+			font-family: copperlate;
+			text-align: center;
+			font-size:20px;
+			color:#000000;
+			margin: 0px 0px 0px 0px;
+		}
+		.item2{
+			font-family: Papyrus;
+			text-align: center;
+			font-size:20px;
+			color:#FFFF;
+			padding: 3px;
+			margin: 10px 30px 0 30px;			
+		}
+		.basket {
+			background-color:#C3BC0D ;
+			width:30%;
+			height:800px;
+			margin-left: auto;
+			margin-right: 30px;
+			text-align: center;
+			font-family: Papyrus;
+			border-style: dashed;
+			border-color:darkgreen;
+
+		}
+		.allProducts {
+			width:70%;
+			heigth:90%;
+			margin-right:auto;
+
+
+		}
+	}
 
 	</style>
 
 </head>
 	<h1> Shop </h1>
 <body>
+
+
+<div class = "allProducts">
+
 	<div class = "products">
-	  <img src = "banana.jpeg" alt = "A banana with fairtrade logo" width="200"  height="200" >
+	  <img src = "banana.jpeg" alt = "A banana with fairtrade logo" width="300"  height="300" >
 	  <div class="item"> Banana </div>
 	  <div class = "price"> &#163; 7 </div>
 	  <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBanana">
+		<input class ="addButton" type="button"  value="Add to Basket" name="addBanana">
 	  </form>
 	</div>  
 	<div class = "products" >
-	 <img src = "flowers.jpeg" alt = "A flower with fairtrade logo" width="200"  height="200" >	
+	 <img src = "flowers.jpeg" alt = "A flower with fairtrade logo" width="300"  height="300" >	
 	 <div class = "item"> Flowers </div>
 	 <div class = "price"> &#163; 6</div>
 	  <form>
@@ -74,7 +120,7 @@
 	  </form>	 
 	</div>
 	<div class = "products">  
-	 <img src = "coffee.jpeg" alt = "A coffee with fairtrade logo" width="200" height="200" >
+	 <img src = "coffee.jpeg" alt = "A coffee with fairtrade logo" width="300" height="300" >
 	 <div class = "item" > Coffee </div>
 	 <div class = "price"> &#163; 8</div>
 	  <form>
@@ -82,7 +128,7 @@
 	  </form>
 	</div>
 	 <div class = "products">  
-	 <img src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="200" height="200" >
+	 <img src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="300" height="300" >
 	 <div class = "item"> Blue Shirt </div>
 	<div class = "price"> &#163; 10 </div>
 	  <form>
@@ -90,59 +136,57 @@
 	  </form>	
     </div>
      <div class = "products">  
-	 <img src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="200" height="200" >
+	 <img src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="300" height="300" >
 	 <div class = "item"  id = "green"> Green Shirt </div>
 	 <div class = "price"> &#163; 10</div>
-	  <form>
+	 <form>
 		<input class ="addButton" type="button" value="Add to Basket" name="addGreen">
 	  </form>	
-    </div>	 
     </div>
     <div class = "products">  
-	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="200" height="200" >
+	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="300" height="300" >
 	 <div class = "item"> Red Shirt </div>
 	 <div class= "price"> &#163; 10 </div>
-	  <form>
+	 <form>
 		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
-	  </form>	
-    </div>	 
+	  </form>	 
     </div>
     <div class = "products">  
-	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="200" height="200" >
-	 <div class = "item"> Reusable Toilet Roll </div>
-	 <div class= "price"> &#163; 2 </div>
-	  <form>
+	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="300" height="300" >
+	 <div class = "item2"> Reusable Toilet Roll </div>
+	 <div class= "price2"> &#163; 2 </div>
+	 <form>
 		<input class ="addButton" type="button" value="Add to Basket" name="addRoll">
-	  </form>	
-    </div>	 
+	  </form>	 
     </div>
     <div class = "products">  
-	 <img src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="200" height="200" >
-	 <div class = "item"> Ecobag </div>
-	 <div class= "price"> &#163; 5 </div>
-	  <form>
+	 <img src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="300" height="300" >
+	 <div class = "item2">Slogan Ecobag </div>
+	 <div class= "price2"> &#163; 5 </div>
+	 <form>
 		<input class ="addButton" type="button" value="Add to Basket" name="addBag">
-	  </form>	
-    </div>	 
+	  </form>	 
     </div>
     <div class = "products">  
-	 <img src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="200" height="200" >
-	 <div class = "item" id = "bamboo"> Bamboo Gift Set </div>
-	 <div class= "price"> &#163; 15 </div>
-	  <form>
+	 <img src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="300" height="300" >
+	 <div class = "item2" id = "bamboo"> Bamboo Gift Set </div>
+	 <div class= "price2"> &#163; 15 </div>
+	 <form>
+	 	<label for ="quantitty"> Quantity </label>
+		<input type = "number" id ="quantity" name = quantity > <br>
 		<input class ="addButton" type="button" value="Add to Basket" name="addBamboo">
 	  </form>	
-    </div>	 
     </div>
-    <div class = "products" >  
-	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="200" height="200" >
-	 <div class = "item" id = "toiletroll"> Red Shirt </div>
-	 <div class= "price"> &#163; 10 </div>
-	  <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
-	  </form>	
-    </div>	 
-    </div>
-    <div class = "basket"> Your Basket: </div>
-    </div>
-    <form>
+     
+</div>
+    <div class = "basket">
+    <h2> Your Basket :</h1>
+</div>
+   
+
+
+
+
+</body>
+
+</html>
