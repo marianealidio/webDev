@@ -4,12 +4,93 @@
 
 <head>
     <title>Gallery</title>
-    !-- when a user hovers over a thumbnail image, it should visually indicate that it's clickable, invitinginteraction;
-     upon clicking a thumbnail, it should expand to reveal an extended view with more detailed content;
-     the extended view should display a larger version of the thumbnail image and include a detailed description associated with the image content this could also popup.
-</head>
+        <style>
+        .scroll div {
+          padding: 10px;
+          flex: none;
+          display: grid;
+          grid-template-columns: auto auto auto;
+          
+          gap: 5px;
+        }
+
+        .scroll div img{
+          width: 160;
+          margin-right: 10px;/*Spacing*/
+          transition: transform 0.3s;
+        }
+
+        body{
+          background: repeating-linear-gradient(90deg, #006a4e, #006a4e 10px, #d0ce51 10px, #d0ce51 20px);
+        }
+
+        .scroll{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          margin: 5% auto;
+          
+          width: 900px;
+        }
+
+
+        #gallery {
+          border-radius: 5px;
+          cursor: pointer;
+          }
+
+          .scroll div img:hover{
+            filter: grayscale(0);
+            transform: scale(1.1);
+            box-shadow: 0 0 2px 1px rgba(45, 48, 50, 0.5);
+          }
+
+          
+        </style>
+
+   </head>
 
     <body>
-        <h1>Gallery</h1>
+      /*when a user hovers over a thumbnail image, it should visually indicate that it's clickable, invitinginteraction;
+     upon clicking a thumbnail, it should expand to reveal an extended view with more detailed content;
+     the extended view should display a larger version of the thumbnail image and include a detailed description associated with the image content this could also popup.*/
+
+    <h1 class="header"> Gallery</h1>
+    <h2>Welcome to the HJAM! gallery! Interested in learning more about being a responsible consumer/producer? Scroll through these images to learn more!</h2>
+
+    <div id="gallery" class="scroll">
+      <div>
+      <img src="images/landfill.jpg" alt="Landfill" id="scImage1" width="200" height="130" onclick="enlargeImg()">
+      <img src="images/manufacture.jpg" alt="Man welding in a factory" id="scImage2" width="200" height="130" onclick="enlargeImg()">
+      <img src="images/shopping.jpg" alt="Rack of clothes" id="scImage3" width="200" height="132.969" onclick="enlargeImg()">
+
+      </div>
+      <div>
+        <img src="images/upcycle.jpg" alt="Upcycled skirt" id="scImage4" width="200" height="130" onclick="enlargeImg()">
+        <img src="images/donation.jpg" alt="Donation" id="scImage5" width="200" height="130" onclick="enlargeImg()">
+        <img src="images/community.jpg" alt="Community" id="scImage6" width="200" height="130"onclick="enlargeImg()">
+        </div>
+
+        <div>
+          <img src="images/collab.jpg" alt="Collaborating people" id="scImage7" width="200" height="130" onclick="enlargeImg()">
+          <img src="images/reserach.jpg" att="Research Scientist" id="scImage8" width="200" height="130" onclick="enlargeImg()">
+        </div>
+    </div>
+
+    <script>
+     img = document.getElementById("gallery");
+        // Function to set image dimensions
+        function enlargeImg() {
+            img.style.width = "800";
+            img.style.height = "730";
+            img.style.transition = "width 0.5s ease";
+        }
+        // Function to reset image dimensions
+        function resetImg() {
+            img.style.width = "200";
+            img.style.height = "130";
+            img.style.transition = "width 0.5s ease";
+        }
+    </script>
     </body>
 </html>
