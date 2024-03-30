@@ -1,96 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to external style sheet-->
 <head>
     <title>Gallery</title>
         <style>
-        .scroll div {
-          padding: 10px;
-          flex: none;
-          display: grid;
-          grid-template-columns: auto auto auto;
-          
-          gap: 5px;
-        }
-
-        .scroll div img{
-          width: 160;
-          margin-right: 10px;/*Spacing*/
-          transition: transform 0.3s;
-        }
-
-        body{
-          background: repeating-linear-gradient(90deg, #006a4e, #006a4e 10px, #d0ce51 10px, #d0ce51 20px);
-        }
-
-        .scroll{
-          display:flex;
-          align-items: center;
-          justify-content: center;
-          margin: 5% auto;
-          
-          width: 900px;
-        }
-
-
-        #gallery {
-          border-radius: 5px;
-          cursor: pointer;
+          .box{
+            margin:auto;
+            width: 50%;
+            text-align: center;
+            margin-top: 70px;
           }
 
-          .scroll div img:hover{
-            filter: grayscale(0);
+          .image-box{
+            width: 100%;
+          }
+
+          .image-box input[type="radio"]{
+            width: 170px;
+            height: 100px;
+            display: inline-block;
+            border: 1px solid #555;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            box-shadow: 0 0 2px #000;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+
+          .image-box input[type="radio"]:hover{
             transform: scale(1.1);
-            box-shadow: 0 0 2px 1px rgba(45, 48, 50, 0.5);
+            box-shadow: 0 0 5px #000;
+          }
+/*Adding images to the larger box*/
+          #img_1{
+            background-image: url(images/community.jpg);
+            background-size: cover;
           }
 
+          #img_2{
+            background-image: url(images/manufacture.jpg);
+            background-size: cover;
+          }
+
+          #img_3{
+            background-image: url(images/landfill.jpg);
+            background-size: cover;
+          }
+
+          #img_4{
+            background-image: url(images/donation.jpg);
+            background-size: cover;
+          }
+
+          #img_5{
+            background-image: url(images/shopping.jpg);
+            background-size: cover;
+          }
+
+          #img_6{
+            background-image: url(images/upcycle.jpg);
+            background-size: cover;
+          }
+
+          #img_7{
+            background-image: url(images/reserach.jpg);
+            background-size: cover;
+          }
+
+          #img_8{
+            background-image: url(images/collab.jpg);
+            background-size: cover;
+          }
+
+          .background{
+            width: 100%;
+            height: 500px;
+            margin-top: 60px;
+            border: 1px solid #222;
+            box-shadow: 0 0 5px #000;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            margin-bottom: 10px;
+          }
+
+          #img_1:checked ~ .background, .text-box{
+            background-image: url(images/community.jpg);
+            background-size: cover;
+          }
+
+          #img_2:checked ~ .background{
+            background-image: url(images/manufacture.jpg);
+            background-size: cover;
+          }
+
+          #img_3:checked ~ .background{
+            background-image: url(images/landfill.jpg);
+            background-size: cover;
+          }
+
+          #img_4:checked ~ .background{
+            background-image: url(images/donation.jpg);
+            background-size: cover;
+          }
+
+          #img_5:checked ~ .background{
+            background-image: url(images/shopping.jpg);
+            background-size: cover;
+          }
+
+          #img_6:checked ~ .background{
+            background-image: url(images/upcycle.jpg);
+            background-size: cover;
+          }
+
+          #img_7:checked ~ .background{
+            background-image: url(images/reserach.jpg);
+            background-size: cover;
+          }
+
+          #img_8:checked ~ .background{
+            background-image: url(images/collab.jpg);
+            background-size: cover;
+          }
+
+          .text-box {
+            margin: 100 50;
+            width: 200px;
+            height: 170px;
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow: hidden;
+            transition: .9s ease-in-out;
+          } /* CSS code from W3 Schools */
           
+          .background:hover .text-box {
+            width: 250px;
+            
+            left: 2;
+          }
+
+          #topBtn{
+              display: none; /* Hidden by default */
+              position: fixed; /* Fixed/sticky position */
+              bottom: 20px; /* Place the button at the bottom of the page */
+              right:200px; /* Place the button 30px from the right */
+              z-index: 99; /* Make sure it does not overlap */
+              border: none; /* Remove borders */
+              outline: none; /* Remove outline */
+              background-color: rgb(121, 196, 234); /* Set a background color */
+              color: white; /* Text color */
+              cursor: pointer; /* Add a mouse pointer on hover */
+              padding: 15px; /* Some padding */
+              border-radius: 10px; /* Rounded corners */
+              font-size: 15px; /* Increase font size */
+        } /* CSS code from W3 Schools */
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+} /* CSS code from W3 Schools */
+
         </style>
 
    </head>
 
     <body>
-      /*when a user hovers over a thumbnail image, it should visually indicate that it's clickable, invitinginteraction;
-     upon clicking a thumbnail, it should expand to reveal an extended view with more detailed content;
-     the extended view should display a larger version of the thumbnail image and include a detailed description associated with the image content this could also popup.*/
-
+      <!-- nav bar code -->
+<nav>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="" class="pic">
+      <h1>Responsible Consumption & Production</h1>
+  </div>
+      <ul id = "top">
+          <li><a href="home"> Home</a></li>
+          <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+          <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+          <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+          <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+          <li><a href="team"> Team</a></li>
+          <li><a href="fedfor"> Feedback Form </a></li>
+      </ul>
+</nav>
+<!-- end of nav bar -->
+      <!-- start of gallery -->
     <h1 class="header"> Gallery</h1>
     <h2>Welcome to the HJAM! gallery! Interested in learning more about being a responsible consumer/producer? Scroll through these images to learn more!</h2>
-
-    <div id="gallery" class="scroll">
-      <div>
-      <img src="images/landfill.jpg" alt="Landfill" id="scImage1" width="200" height="130" onclick="enlargeImg()">
-      <img src="images/manufacture.jpg" alt="Man welding in a factory" id="scImage2" width="200" height="130" onclick="enlargeImg()">
-      <img src="images/shopping.jpg" alt="Rack of clothes" id="scImage3" width="200" height="132.969" onclick="enlargeImg()">
-
+        
+    <!-- Container for thumbnail images -->
+    <div class="box">
+      <div class="image-box">
+        <input type="radio" id="img_1" name="image" checked>
+        <input type="radio" id="img_2" name="image">
+        <input type="radio" id="img_3" name="image">
+        <input type="radio" id="img_4" name="image">
+        <input type="radio" id="img_5" name="image">
+        <input type="radio" id="img_6" name="image">
+        <input type="radio" id="img_7" name="image">
+        <input type="radio" id="img_8" name="image">
+          
+       <!-- Larger image with text -->
+        <div class="background">
+          <div class="text-box">
+        <p class="text">Responsible Consumption & Production<p><br>
+        <p>Its a group effort</p>
       </div>
-      <div>
-        <img src="images/upcycle.jpg" alt="Upcycled skirt" id="scImage4" width="200" height="130" onclick="enlargeImg()">
-        <img src="images/donation.jpg" alt="Donation" id="scImage5" width="200" height="130" onclick="enlargeImg()">
-        <img src="images/community.jpg" alt="Community" id="scImage6" width="200" height="130"onclick="enlargeImg()">
         </div>
-
-        <div>
-          <img src="images/collab.jpg" alt="Collaborating people" id="scImage7" width="200" height="130" onclick="enlargeImg()">
-          <img src="images/reserach.jpg" att="Research Scientist" id="scImage8" width="200" height="130" onclick="enlargeImg()">
-        </div>
+          </div>
     </div>
 
-    <script>
-     img = document.getElementById("gallery");
-        // Function to set image dimensions
-        function enlargeImg() {
-            img.style.width = "800";
-            img.style.height = "730";
-            img.style.transition = "width 0.5s ease";
-        }
-        // Function to reset image dimensions
-        function resetImg() {
-            img.style.width = "200";
-            img.style.height = "130";
-            img.style.transition = "width 0.5s ease";
-        }
-    </script>
+    <div>
+      <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
+  </div>
+
+  <script>
+    
+  let topbutton = document.getElementById("topBtn");
+  
+  // show the button when the user scrolls down 20px from the top of the document
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topbutton.style.display = "block";
+    } else {
+      topbutton.style.display = "none";
+    }
+  }
+  
+  // Back to top button on click
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  } 
+  </script>
+    <!-- footer code -->
+ <footer>
+  <span class="useful">Useful Links</span><br>
+  <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+  <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
+  <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
+  <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
+</footer>
+<!-- end of footer code -->
+
+<!-- accesibility statement footer -->
+<footer>
+  &copy; w1973296 Jodel Djan 2024
+</footer>
+
+<footer class="access">
+  <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
+</footer>
     </body>
 </html>
