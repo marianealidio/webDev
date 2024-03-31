@@ -4,8 +4,11 @@
 
 <head>
 	<title> Shop </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Style.css">	
 	<style>
-		h1{
+		h2{
 			color: #042912;
 			font-size: 50px;
 			font-family: Lucida Handwriting;
@@ -16,15 +19,16 @@
 			font-family : sans sans-serif, ;
 			background-color:#0D5A3E;
 			margin: 0px 0px 0px 15px;
+			padding: 15px;
 
 		}
 		.products{
 			background-color :#C3BC0D;
 			margin: 70px 50px 0 0;
-			height: 450px;
+			height: 500px;
 			width: 300px;
 			float:left;
-			padding: 3px ;
+			padding:20px ;
 			border-style: double;
 			border-color:darkgreen;
 			align-content: center;
@@ -34,12 +38,8 @@
 			text-align: center;
 			font-size:20px;
 			color:#FFFF;
-			padding: 5px;
-			margin: 20px 40px 0 40px;
-		}
-		#green {
-			margin: 20px 45px 0 40px;
-			padding: 6px;
+			padding: 3px;
+			margin: 10px 30px 0 30px;
 		}
 
 		.price {
@@ -47,146 +47,192 @@
 			text-align: center;
 			font-size:20px;
 			color:#000000;
-			margin: 5px 40px 0 40px;
+			margin: 0px 0px 0px 0px;
 		}
-		.addButton {
+		.addButton{
 			background-color:#2E9654 ;
 			font-family: Courier New;
 			font-size: 15px;
 			width: 150px;
 			height:35px;
 			padding: 3px;
-			margin: 15px 10px 0px 80px;
+			margin: 10px 10px 0px 80px;
 		}
-		.price2 {
-			font-family: copperlate;
-			text-align: center;
-			font-size:20px;
-			color:#000000;
-			margin: 0px 0px 0px 0px;
+		.checkout{
+			position: absolute;
+			bottom: 10px;
+			background-color:#2E9654 ;
+			font-family: Courier New;
+			font-size: 15px;
+			width: 40%;
+			height:5%;
+			margin-right: 5px;
+			margin-top: 80px;
 		}
-		.item2{
-			font-family: Papyrus;
-			text-align: center;
-			font-size:20px;
-			color:#FFFF;
-			padding: 3px;
-			margin: 10px 30px 0 30px;			
-		}
-		.basket {
-			background-color:#C3BC0D ;
-			width:30%;
-			height:800px;
-			margin-left: auto;
-			margin-right: 30px;
-			text-align: center;
-			font-family: Papyrus;
-			border-style: dashed;
-			border-color:darkgreen;
+		.addQuantity,.size{
+			font-family: Courier New;
+			font-size: 15px;
+			width: 145px;
+			height:20px;
+			padding: 1px;
+			margin-top: 5px;
+		}			
+       .basket {
+            background-color: #C3BC0D;
+            width: 30%;
+            margin-left: auto;
+            margin-right: 30px;
+            text-align: center;
+            font-family: Papyrus;
+            border-style: dashed;
+            border-color: darkgreen;
+            position: relative;
+            min-height: 500px;
+            padding-bottom: 60px; 
+        }
 
-		}
 		.allProducts {
 			width:70%;
 			heigth:90%;
 			margin-right:auto;
-
-
 		}
-	}
+		.basketItem {
+		    border-bottom: 1px solid #ddd; /* Add a border between items */
+		    padding: 10px;
+		}
 
+		.itemName {
+		    font-weight: bold;
+		}
+
+		.itemPrice {
+		    color: green; /* Adjust color as needed */
+		}
+		main{
+			margin-top:199px;
+		}
 	</style>
 
 </head>
-	<h1> Shop </h1>
 <body>
-
-
+<header>
+<!-- nav bar code -->
+<nav>
+    <div class="logo-container">
+        <img src="logo1.png" alt="" class="pic">
+        <h1>Responsible Consumption & Production</h1>
+    </div>
+            <ul id = "top">
+            <li><a href="home"> Home</a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+            <li><a href="team"> Team</a></li>
+            <li><a href="fedfor"> Feedback Form </a></li>
+        </ul>
+ </nav>
+</header> 
+<main>
+<h2> Shop </h2>  
 <div class = "allProducts">
-
-	<div class = "products">
-	  <img src = "banana.jpeg" alt = "A banana with fairtrade logo" width="300"  height="300" >
-	  <div class="item"> Banana </div>
-	  <div class = "price"> &#163; 7 </div>
-	  <form>
-		<input class ="addButton" type="button"  value="Add to Basket" name="addBanana">
-	  </form>
-	</div>  
-	<div class = "products" >
-	 <img src = "flowers.jpeg" alt = "A flower with fairtrade logo" width="300"  height="300" >	
-	 <div class = "item"> Flowers </div>
-	 <div class = "price"> &#163; 6</div>
-	  <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addFlowers">
-	  </form>	 
-	</div>
-	<div class = "products">  
-	 <img src = "coffee.jpeg" alt = "A coffee with fairtrade logo" width="300" height="300" >
-	 <div class = "item" > Coffee </div>
-	 <div class = "price"> &#163; 8</div>
-	  <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addCoffee">
-	  </form>
-	</div>
 	 <div class = "products">  
 	 <img src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="300" height="300" >
 	 <div class = "item"> Blue Shirt </div>
 	<div class = "price"> &#163; 10 </div>
-	  <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBlue">
-	  </form>	
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity >
+		<br>
+		<label for="size" class="size" >Size:</label>
+		<select name="size" class ="size" id="size">
+		<option value="extra small">Extra Small</option>
+        <option value="small" selected>Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="extra large">Extra Large</option>
+        </select>
+		<input class="addButton" type="button" value="Add to Basket" name="addBlue">
+
     </div>
-     <div class = "products">  
+     <div class = "products" id= "GreenShirt">  
 	 <img src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="300" height="300" >
-	 <div class = "item"  id = "green"> Green Shirt </div>
+	 <div class = "item" name = "Green Shirt" > Green Shirt </div>
 	 <div class = "price"> &#163; 10</div>
-	 <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addGreen">
-	  </form>	
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity >
+		<br>
+		<label for="size" class="size" >Size:</label>
+		<select name="size" class ="size" id="size">
+		<option value="extra small">Extra Small</option>
+        <option value="small" selected>Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="extra large">Extra Large</option>
+        </select>
+        <input class ="addButton" type="button" value="Add to Basket" name="addGreen">
     </div>
     <div class = "products">  
 	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="300" height="300" >
 	 <div class = "item"> Red Shirt </div>
 	 <div class= "price"> &#163; 10 </div>
-	 <form>
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity >
+		<br>
+		<label for="size" class="size" >Size:</label>
+		<select name="size" class ="size" id="size">
+		<option value="extra small">Extra Small</option>
+        <option value="small" selected>Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="extra large">Extra Large</option>
+        </select>
 		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
-	  </form>	 
     </div>
     <div class = "products">  
-	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="300" height="300" >
-	 <div class = "item2"> Reusable Toilet Roll </div>
-	 <div class= "price2"> &#163; 2 </div>
-	 <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addRoll">
-	  </form>	 
+	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="300" height="250" >
+	 <div class = "item"> Reusable Toilet Roll </div>
+	 <div class= "price"> &#163; 2 </div>
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity >
+		 <br>
+		<label for="green">Green</label>
+		<input type="radio" name="green" id="green" 
+		value="green" checked>
+		<label for="violet">Violet</label>
+		<input type="radio" name="violet" id="violet" 
+		value="violet">
+		<label for="yellow">Yellow</label>	
+		<input type="radio" name="yellow" id="yellow" 
+		value="yellow">
+		<input class ="addButton" type="button" value="Add to Basket" name="addBlue">
     </div>
     <div class = "products">  
 	 <img src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="300" height="300" >
-	 <div class = "item2">Slogan Ecobag </div>
-	 <div class= "price2"> &#163; 5 </div>
-	 <form>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBag">
-	  </form>	 
+	 <div class = "item">Slogan Ecobag </div>
+	 <div class= "price"> &#163; 5 </div>
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity > <br>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBag">	 
     </div>
     <div class = "products">  
 	 <img src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="300" height="300" >
-	 <div class = "item2" id = "bamboo"> Bamboo Gift Set </div>
-	 <div class= "price2"> &#163; 15 </div>
-	 <form>
-	 	<label for ="quantitty"> Quantity </label>
-		<input type = "number" id ="quantity" name = quantity > <br>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBamboo">
-	  </form>	
-    </div>
-     
+	 <div class = "item" id = "bamboo"> Bamboo Gift Set </div>
+	 <div class= "price"> &#163; 15 </div>
+	 	<label class = addQuantity for ="quantity"> Quantity </label>
+		<input class = addQuantity type = "number" id ="quantity" name = quantity > <br>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBamboo" >
+	</div>
 </div>
-    <div class = "basket">
-    <h2> Your Basket :</h1>
+    <div class = "basket">    		
+		<h3> Your Basket :</h3>
+    	<div class ="basketContainer"> </div>
+    	<div id="totalPrice"></div>
+    	<a href="order_form.html" >
+    	<input class ="checkout" type="button" value="Checkout">
+        </a>
+
 </div>
-   
-
-
-
-
+</main>
 </body>
 
 </html>
