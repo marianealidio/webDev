@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to external style sheet-->
+
+<head>
+    <title>Page Editor</title>
+    
+    <style>
+       
+        h2{
+            text-align: center;
+            letter-spacing: 0.1em;
+            background-image: linear-gradient(305deg, tomato, gold, cyan); /* code from: https://codepen.io/smashing-magazine/pen/dyzPQor */
+            padding: 2px;
+            margin-top: 195px;
+        }
+
+ 
+
+        .bio ul{
+            font-style: italic;
+            background-color: bisque;
+            border: 3px solid #f8a100;
+        }
+
+        .gl, .sm, .cn {
+            cursor: pointer;
+            margin: auto;
+            font-size: 5vmin;
+            font-weight: 300;
+            transition: font-weight 250ms ease-in-out;
+            padding: 3px;
+            background-color: cadetblue;
+        }
+
+        a{
+            color: black;
+        }
+
+        .cn:hover{
+            font-weight: 900;
+        }
+
+        .gl:hover{
+            font-weight: 900;
+        }
+
+        .sm:hover{
+            font-weight: 900;
+        }
+
+        .gallery, .sitemap, .content{
+            border: 5px hidden;
+            background-image: linear-gradient(305deg, tomato, gold, cyan);
+            background-color: bisque;
+        }
+
+        footer{
+            text-align: center;
+        }
+
+        #topBtn{
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right:200px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: rgb(121, 196, 234); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 15px; /* Increase font size */
+        }
+
+        #topBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+        }
+
+        
+    </style>
+</head>
+   
+    <body>
+
+         <!-- nav bar code -->
+<nav>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="" class="pic">
+        <h1>Responsible Consumption & Production</h1>
+    </div>
+        <ul id = "top">
+            <li><a href="home"> Home</a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+            <li><a href="team"> Team</a></li>
+            <li><a href="fedfor"> Feedback Form </a></li>
+        </ul>
+  </nav>
+  <!-- end of nav bar -->
+
+        <!-- beginning of page editor -->
+        <div class="bio">
+            <h2>
+            Page Editor
+        </h2>
+        <hr>
+        <ul>
+            <li>Name: Jodel Djan</li>
+            <li>Role: Student 4</li>
+            <li>I edited the following pages</li>
+        </ul>
+        </div>
+        
+         <hr>
+         <div class="gallery">
+         <p class="gl">Gallery</p>
+         <p>Created an interavtive gallery with thumbnails that indicate the images are clickable with text describing the image</p>
+         <p><a href=" https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html">Link to gallery</a></p>
+        </div>
+         
+        <div class="sitemap">
+            <p class="sm">Sitemap</p>
+            <p>Created a sitemap with SVGs using HTML, CSS and Javascript. I added hover effects on each node to indicate that they were clickable. Each node contains a link to every page</p>
+            <p><a href=" https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html">Link to sitemap</a></p>
+        </div>
+
+        <div class="content">
+            <p class="cn">Content page</p>
+            <p>This page contains information pertaining to the theme with text and images. It also contains the nav bar from Student 2 which leads back to the other webpages</p>
+            <p><a href=" https://w1973296.users.ecs.westminster.ac.uk/HJAM!/content_ST4.html">Link to content page</a></p>
+        </div>
+
+         <!-- Back to top button -->
+    <div><button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button></div>
+
+    <script>
+        
+        // Get the button:
+    let topbutton = document.getElementById("topBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.documentElement.scrollTop > 20) {
+        topbutton.style.display = "block";
+      } else {
+        topbutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+
+        <!-- footer containing page editors -->
+        <footer>
+            <span class="useful">Useful Links</span><br>
+            <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+            <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
+            <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
+            <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
+          </footer>
+
+        <!-- footer containing accesibility statement -->
+        <footer>
+            &copy; w1973296 Jodel Djan 2024
+        </footer>
+    
+        <footer class="access">
+            <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
+        </footer>
+    </body>
+</html>

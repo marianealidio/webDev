@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<head>
+    <head>
     <title>Content page</title>
+    <style>
+
+.container{
+    margin-top: 70px;
+    border: 50px hidden;
+}
+
+.heading {
+    margin-top: 180px;
+    color: black;
+    margin-right: 10px;
     
+}
+
+.manu, .cons{
+    text-align: center;
+}
+
+.manufacture{
+    background-color: antiquewhite;
+}
+
+#topBtn{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right:200px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(121, 196, 234); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+    </style>
 </head>
 
 <body>
-    <nav>
+    <!-- nav bar code -->
+<nav>
     <div class="logo-container">
-        <img src="../images/logo1.png" alt="" class="pic">
+        <img src="images/logo.png" alt="" class="pic">
         <h1>Responsible Consumption & Production</h1>
     </div>
         <ul id = "top">
@@ -23,10 +68,95 @@
             <li><a href="fedfor"> Feedback Form </a></li>
         </ul>
 </nav>
-    <h1>Insights</h1>
-    <div>
-        <img src="images/">
-        <text>The aims of this page are educate, inform and raise funds for </text>
+<!-- end of nav bar -->
+
+<!-- start of content page -->
+    
+        <h2>Insights</h2>
+    <h2>Why responsiblie consumption and production?</h2>
+    
+    <!-- universal wrapper for all images and text -->
+    <div class="container">
+        <!-- div class for the intro -->
+        <div class="intro">
+             
+             <p>Responsible consumption and production pertains to manufacturing and purchasing practices that are done with sustainability in mind. As a producer, it is important to create products that are made with low-impact materials, made to last and can be reused or recycled. This allows for the life of products to be extended and prevents waste buildup in landfills across the world. As a consumer it is important to stay informed and do your part to reduce waste.</p>
+        </div>
+
+        <p class="manu"><b>For Manufacturers</b></p>
+        <div class="manufacture">
+        <img src="images/plastic.jpg" alt="Plastic" width="200" height="133" style="float:right">
+        <p><b>How can you responsibly manufacture?</b></p>
+            <p>This is a question without a straightforward answer.
+            But first, it is important to consider responsible production with the launch of every new product. It is also imperative to invest in scientific research about the environmental impact of your products. Like the materials used and how harmful they can be to the environment and people. For example, reducing the use of petroleum based products as these have shown to have a devastating effect on the environment. Using recycled or low-impact materials in packaging, shipping with a carbon neutral provider and investing in initiatives that encourage responsible production are all great ways to ensure sustainability. </p>
+           
+            <p><b>Ethical labour practices:</b> Consumers have shown that they care and want to be informed of where and how the products they buy are made. Making sure your workers are offered safe working conditions and are compensated fairly is a great step in responsible production. This way you can reduce the negative social and environmental effects of your products. It is also important to be transparent with your sustainability goals and targets. Constantly keeping track of the progress your organisation has made towards becoming more sustainable is step in the right direction.</p>
+               
+            <p><b>Encouraging sustainable behaviour:</b> Another way to be a responsible producer is to invest in campaigns which urge consumers to dispose of their waste correctly, reuse your product or return the product after use for a token. These incentives contribute to lowering the environmental impact of your product.</p> 
+        </div>
+
+                <div class="consumer">
+                    <img src="images/money.jpg" alt="Money" width="200" height="133" style="float:left">
+                    <p class="cons"><b>For Consumers</b></p>
+                    <p><b>Mindful shopping:</b> Whether you are grocery shopping for the week or purchasing a new clothing item it is important to consider if you are being mindful with your purchase. What does this mean? It means considering if you need that item, if you already have a similar item, why you are making this purchase, and what the material make-up of the item is. Also make sure to look closely at brands that champion sustainability, make efforts to reduce waste and have ethical worker practices.</p>                    
+                </div>
+
+                    <div>
+                        <img src="images/market.jpg" alt="Market" width="200" height="133" style="float:right">
+                        <p>You can also consider how many times you might wear the item for the price you’re purchasing it for (cost per wear) and if you know how to properly store it to make sure it lasts longer. According to the UN, the average person wastes 120 kilograms of  food each year. This shows that mindful consumption can reduce negative environmental impacts. 
+                        Some responsible consumption habits include: </p>
+                        <ol>
+                            <li>Buying secondhand</li>
+                            <li>Investing in well made and high quality items</li>
+                            <li>Learning about how to store food items correctly</li>
+                            <li>Only buying food that is in season and shopping locally</li>
+                        </ol>
+                    </div>
     </div>
+
+    <div>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
+    </div>
+
+    <script>
+       // Get the button:
+    let topbutton = document.getElementById("topBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topbutton.style.display = "block";
+      } else {
+        topbutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+    </script>
+    
+    <!-- footer code -->
+ <footer>
+    <span class="useful">Useful Links</span><br>
+    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html"> Page Editor Student 1</a><br>
+    <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
+    <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
+    <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST4.html" target="_blank"> Page Editor Student 4</a><br>
+</footer>
+<!-- end of footer code -->
+
+<!-- accesibility statement footer -->
+ <footer>
+    &copy; w1973296 Jodel Djan 2024
+</footer>
+
+<footer class="access">
+    <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
+</footer>
 </body>
 </html>

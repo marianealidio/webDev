@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to external style sheet-->
+
 <head>
     <title>Gallery</title>
         <style>
@@ -10,7 +11,7 @@
             margin:auto;
             width: 50%;
             text-align: center;
-            margin-top: 70px;
+            margin-top: 180px;
           }
 
           .image-box{
@@ -34,7 +35,8 @@
             transform: scale(1.1);
             box-shadow: 0 0 5px #000;
           }
-/*Adding images to the larger box*/
+        
+          /*Adding images to the larger box*/
           #img_1{
             background-image: url(images/community.jpg);
             background-size: cover;
@@ -127,7 +129,7 @@
           }
 
           .text-box {
-            margin: 100 50;
+            margin: 100px 50px;
             width: 200px;
             height: 170px;
             background: rgb(0, 0, 0); /* Fallback color */
@@ -141,8 +143,6 @@
           
           .background:hover .text-box {
             width: 250px;
-            
-            left: 2;
           }
 
           #topBtn{
@@ -163,7 +163,28 @@
 
 #topBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
-} /* CSS code from W3 Schools */
+} /* CSS code from W3 Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_slideright */
+
+        .clrbtn-container{
+          border: 2px solid #333;
+        }
+
+        .color{
+          display: table-cell;
+          width: 50px;
+          height: 50px;
+          margin: 0 1px;
+          cursor: pointer;
+          border: 2px solid #fff;
+        }
+
+        .clr1{
+          background-color: aquamarine;
+        }
+
+        .clr1{
+          background-color: brown;
+        }
 
         </style>
 
@@ -188,8 +209,6 @@
 </nav>
 <!-- end of nav bar -->
       <!-- start of gallery -->
-    <h1 class="header"> Gallery</h1>
-    <h2>Welcome to the HJAM! gallery! Interested in learning more about being a responsible consumer/producer? Scroll through these images to learn more!</h2>
         
     <!-- Container for thumbnail images -->
     <div class="box">
@@ -206,8 +225,8 @@
        <!-- Larger image with text -->
         <div class="background">
           <div class="text-box">
-        <p class="text">Responsible Consumption & Production<p><br>
-        <p>Its a group effort</p>
+        <p class="text">Responsible Consumption & Production<p>
+        <p>These are ways we can all play a part in reducing overconsumption and it's consequences</p>
       </div>
         </div>
           </div>
@@ -216,6 +235,16 @@
     <div>
       <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
   </div>
+
+  <!-- colour change buttons -->
+  <div class="clrbtn-container">
+    <span id="1" onclick="color(this)" class="color clr1"></span>
+    <span id="2" onclick="color(this)" class="color clr2"></span>
+  </div>
+
+
+  <!-- font change buttons -->
+
 
   <script>
     
@@ -247,6 +276,9 @@
   <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
 </footer>
 <!-- end of footer code -->
+
+<!-- Change background colour on click -->
+
 
 <!-- accesibility statement footer -->
 <footer>
