@@ -1,151 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to external style sheet-->
 <head>
-    <title>Gallery</title>
-        <style>
-          .box{
-            margin:auto;
-            width: 50%;
-            text-align: center;
-            margin-top: 70px;
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Magnification</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to external style sheet-->
 
-          .image-box{
-            width: 100%;
-          }
+    <style>
+*{/*Body styling*/
+    margin: 0;
+    padding: 0;
+    
+}
+h2{
+    text-align: center;
+    font-weight: 300;
+}
 
-          .image-box input[type="radio"]{
-            width: 170px;
-            height: 100px;
-            display: inline-block;
-            border: 1px solid #555;
-            outline: none;
-            appearance: none;
-            cursor: pointer;
-            box-shadow: 0 0 2px #000;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
+/*All content container styling*/
+.container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
 
-          .image-box input[type="radio"]:hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 5px #000;
-          }
-/*Adding images to the larger box*/
-          #img_1{
-            background-image: url(images/community.jpg);
-            background-size: cover;
-          }
+/*Carousel images styling*/
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 7px;
+}
 
-          #img_2{
-            background-image: url(images/manufacture.jpg);
-            background-size: cover;
-          }
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
-          #img_3{
-            background-image: url(images/landfill.jpg);
-            background-size: cover;
-          }
+.cr {
+    width: 100%;
+    height: auto;
+}
 
-          #img_4{
-            background-image: url(images/donation.jpg);
-            background-size: cover;
-          }
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
 
-          #img_5{
-            background-image: url(images/shopping.jpg);
-            background-size: cover;
-          }
+/*Grid gallery styling*/
+.mdsec{
+    display:flex;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.midx{
+    padding: 12px;
+}
+.midx img{
+    width: 470px;
+    height: 300px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 7px;
+    transform: perspective(1px) translateZ(0);
+    transition: all ease 0.3s;
+}
+.midx img:hover{
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-          #img_6{
-            background-image: url(images/upcycle.jpg);
-            background-size: cover;
-          }
+/*Popup styling*/
+.popup-container {
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    text-align: center;
+    margin-top: 50px;
+}
 
-          #img_7{
-            background-image: url(images/reserach.jpg);
-            background-size: cover;
-          }
+.popup-img {
+    max-width: 100%;
+}
 
-          #img_8{
-            background-image: url(images/collab.jpg);
-            background-size: cover;
-          }
+/*Close popup id*/
+#spx{
+    position: absolute; 
+    top: 10px;
+    right: 5px;
+    cursor: pointer; 
+}
 
-          .background{
-            width: 100%;
-            height: 500px;
-            margin-top: 60px;
-            border: 1px solid #222;
-            box-shadow: 0 0 5px #000;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            margin-bottom: 10px;
-          }
+/*close the popup image styling*/
+.close{
+    font-size: 60px;
+    color: white;
+}
 
-          #img_1:checked ~ .background, .text-box{
-            background-image: url(images/community.jpg);
-            background-size: cover;
-          }
+/*Change font button container styling*/
+.font-container{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1200px;
+          flex-direction: column;
+          margin: 20px auto;
+          padding: 0 20px;
+        }
+       
+       
+        .font-container .fnt-button{
+          width: 100%;
+          margin-bottom: 20px;
+        }
 
-          #img_2:checked ~ .background{
-            background-image: url(images/manufacture.jpg);
-            background-size: cover;
-          }
-
-          #img_3:checked ~ .background{
-            background-image: url(images/landfill.jpg);
-            background-size: cover;
-          }
-
-          #img_4:checked ~ .background{
-            background-image: url(images/donation.jpg);
-            background-size: cover;
-          }
-
-          #img_5:checked ~ .background{
-            background-image: url(images/shopping.jpg);
-            background-size: cover;
-          }
-
-          #img_6:checked ~ .background{
-            background-image: url(images/upcycle.jpg);
-            background-size: cover;
-          }
-
-          #img_7:checked ~ .background{
-            background-image: url(images/reserach.jpg);
-            background-size: cover;
-          }
-
-          #img_8:checked ~ .background{
-            background-image: url(images/collab.jpg);
-            background-size: cover;
-          }
-
-          .text-box {
-            margin: 100 50;
-            width: 200px;
-            height: 170px;
-            background: rgb(0, 0, 0); /* Fallback color */
-            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-            color: white;
-            padding-left: 20px;
-            padding-right: 20px;
-            overflow: hidden;
-            transition: .9s ease-in-out;
-          } /* CSS code from W3 Schools */
+        .font-container .fnt-button .ftbtn{
+          padding: 0 10px;
+          display: inline-flex;
+          background: #d08989;
+          color: #fff;
           
-          .background:hover .text-box {
-            width: 250px;
-            
-            left: 2;
-          }
+          cursor: pointer;
+          margin: 10px auto;
+        }
 
-          #topBtn{
+        .font-container .fnt-button .ftbtn:hover{
+          background: #212020;
+
+        }
+
+        .font-container .text-box {
+          transition: 0.5s;
+        }
+
+        .font-container p{
+          margin: 10px auto;
+        }
+
+        /*Random background button container styling*/
+        .random button{
+          font-size: 15px;
+          background-color: #759fde;
+          border: 5px solid #5493b5;
+          color: #fff;
+          border-radius: 50px;
+          cursor: pointer;
+          outline: none;
+          letter-spacing: 1.5px;
+         
+         margin: 0 150px;
+         
+        }
+
+        /*Provided background colour change button container styling*/
+        .colorbg{
+          border-radius: 50%;
+          padding: 10px 33px;
+          background: var(--color);
+          cursor: pointer;
+          margin: 0 50px;
+          display: inline-block;
+        }
+
+        .btn{
+         
+          padding: 10px 33px;
+          background: var(--color);
+          cursor: pointer;
+          
+        }
+
+        .btn1 {--color: cadetblue;}
+        .btn2 {--color: brown;}
+        .btn3 {--color: burlywood;}
+
+        /*Back to top button styling*/
+        #topBtn{
               display: none; /* Hidden by default */
               position: fixed; /* Fixed/sticky position */
               bottom: 20px; /* Place the button at the bottom of the page */
@@ -161,64 +196,181 @@
               font-size: 15px; /* Increase font size */
         } /* CSS code from W3 Schools */
 
-#topBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-} /* CSS code from W3 Schools */
+        #topBtn:hover {
+          background-color: #555; /* Add a dark-grey background on hover */
+        } /* CSS code from W3 Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_slideright */
 
-        </style>
+        /*Container for text description*/
+        .text-box {
+            
+    position:fixed;
+    top: 50%;
+    left: 50%;
+   
+    
+    z-index: 999;
+    text-align: center;
+    margin-top: 50px;
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+           
+            transition: .9s ease-in-out;
+            font-size: 15px;
+          } /* CSS code from W3 Schools */
 
-   </head>
-
-    <body>
-      <!-- nav bar code -->
+    </style>
+</head>
+<body>
+    <!-- nav bar code -->
 <nav>
-  <div class="logo-container">
-    <img src="images/logo.png" alt="" class="pic">
-      <h1>Responsible Consumption & Production</h1>
-  </div>
-      <ul id = "top">
-          <li><a href="home"> Home</a></li>
-          <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
-          <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
-          <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
-          <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
-          <li><a href="team"> Team</a></li>
-          <li><a href="fedfor"> Feedback Form </a></li>
-      </ul>
-</nav>
-<!-- end of nav bar -->
-      <!-- start of gallery -->
-    <h1 class="header"> Gallery</h1>
-    <h2>Welcome to the HJAM! gallery! Interested in learning more about being a responsible consumer/producer? Scroll through these images to learn more!</h2>
-        
-    <!-- Container for thumbnail images -->
-    <div class="box">
-      <div class="image-box">
-        <input type="radio" id="img_1" name="image" checked>
-        <input type="radio" id="img_2" name="image">
-        <input type="radio" id="img_3" name="image">
-        <input type="radio" id="img_4" name="image">
-        <input type="radio" id="img_5" name="image">
-        <input type="radio" id="img_6" name="image">
-        <input type="radio" id="img_7" name="image">
-        <input type="radio" id="img_8" name="image">
-          
-       <!-- Larger image with text -->
-        <div class="background">
-          <div class="text-box">
-        <p class="text">Responsible Consumption & Production<p><br>
-        <p>Its a group effort</p>
-      </div>
-        </div>
-          </div>
+    <div class="logo-container"> <!-- div class used to style the header -->
+        <img src="images/logo.png" alt="logo" class="pic">
+        <h1>Responsible Consumption & Production</h1>
     </div>
+        <ul> <!-- unordered list used for nav bar -->
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/home.html" target="_blank"> Home</a></li> 
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM!/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/team.html" target="_blank"> Team</a></li>
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/feedback.html" target="_blank"> Feedback Form </a></li>
+        </ul>
+  </nav>
+  
+  <!-- end of nav bar code -->
+
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider" id="carousel">
+                <img src="images/collab.jpg" alt="carousel Image 1" class="cr" id="slide-1">
+                <img src="images/community.jpg" alt="carousel Image 2" class="cr" id="slide-2">
+                <img src="images/donation.jpg" alt="carousel Image 3" class="cr" id="slide-3">
+                <img src="images/landfill.jpg" alt="carousel Image 4" class="cr" id="slide-4">
+                <img src="images/market.jpg" alt="carousel Image 5" class="cr" id="slide-5">
+            </div>
+        </div>
+    </section>
+    <h2>Gallery</h2>
+    <section class="mdsec">
+        <div class="midx">
+            <img src="images/collab.jpg" alt="img-1" id="hvrimg-1" onclick="enlargeImage(this)">
+        </div>
+        <div class="midx">
+            <img src="images/community.jpg" alt="img-2" id="hvrimg-2 "onclick="enlargeImage(this)">
+        </div>
+        <div class="midx">
+            <img src="images/donation.jpg" alt="img-3" id="hvrimg-3 " onclick="enlargeImage(this)">
+        </div>
+        <div class="midx">
+            <img src="images/landfill.jpg" alt="img-4" id="hvrimg-4" onclick="enlargeImage(this)">
+        </div>
+        <div class="midx">
+            <img src="images/manufacture.jpg" alt="img-5" id="hvrimg-5" onclick="enlargeImage(this)">
+        </div>
+        <div class="midx">
+            <img src="images/market.jpg" alt="img-6" id="hvrimg-6 " onclick="enlargeImage(this)">
+        </div>
+    </section>
+    <div class="popup-container" id="popup-container">
+        <div class="text-box" id="chngFont">
+            <p class="text">Responsible Consumption & Production<p>
+            <p>These are ways we can all play a part in reducing overconsumption and it's consequences</p>
+          </div>
+        <img class="popup-img" id="popup-img" src="" alt="Enlarged Image">
+        
+        <span onclick="closePopup()" id="spx"><p class="close"><b>&times</b></p></span>
+    
+        </div>
 
     <div>
-      <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
-  </div>
-
-  <script>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
+      </div>
+  
+    <!-- colour change buttons -->
+  
+    <div class="colorbg">
+      <p><b>Select to change background colour</b></p>
+      <button class="btn btn1"></button>
+      <button class="btn btn2"></button>
+      <button class="btn btn3"></button>
+    </div>
+  
+    <!-- random colour buttons -->
+    <div class="random">
+      <button onclick="randomclr()">RANDOM</button>
+    </div>
     
+  
+    <!-- font change buttons -->
+    <div class="font-container">
+      <div class="fnt-button">
+        <p><b>Change font size</b></p>
+        <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '10px'">Decrease</span>
+        <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '20px'">Increase</span>
+        <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '15px'">Reset</span>
+      </div>
+    </div>
+
+    <script>
+        //To enlarge the Image
+function enlargeImage(imgElement) {
+    var body = document.body;
+    var popupContainer = document.getElementById('popup-container');
+    var popupImg = document.getElementById('popup-img');
+
+    popupImg.src = imgElement.src;
+    popupImg.alt = imgElement.alt;
+
+    body.classList.add('enlarged');
+    popupContainer.style.display = 'block';
+}
+//To closing the pop screen
+function closePopup() {
+    var body = document.body;
+    var popupContainer = document.getElementById('popup-container');
+
+    body.classList.remove('enlarged');
+    popupContainer.style.display = 'none';
+}
+//For sliding images accross the screen
+const slider = document.getElementById('carousel');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % 5;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const translateValue = -currentIndex * 100 + '%';
+        slider.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    setInterval(nextSlide, 3000);
+
+    // change background to random colour
+    function randomclr(){
+      document.body.style.backgroundColor=
+      'rgb('+ Math.round(Math.random() * 255)+
+      ','+ Math.round(Math.random() * 255)+
+      ','+ Math.round(Math.random() * 255)+')';
+    } 
+    // code from: https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/tutorials/Tutorial5.html and https://youtu.be/xnUrOjV6t6g?si=sFtx9hXMDnn9xijA
+
+    // change background to named colour
+    const buttons = document.getElementsByClassName("btn");
+    for (const btn of buttons){
+      btn.addEventListener("click", function(){
+        const btnStyle = getComputedStyle(this);
+        const btnBackgroundcolour = btnStyle["backgroundColor"];
+        document.body.style.backgroundColor = btnBackgroundcolour;
+      })
+    }
+
+    // back top button
   let topbutton = document.getElementById("topBtn");
   
   // show the button when the user scrolls down 20px from the top of the document
@@ -237,24 +389,25 @@
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   } 
-  </script>
+    </script>
+
     <!-- footer code -->
- <footer>
-  <span class="useful">Useful Links</span><br>
-  <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
-  <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
-  <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
-  <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
-</footer>
-<!-- end of footer code -->
-
-<!-- accesibility statement footer -->
 <footer>
-  &copy; w1973296 Jodel Djan 2024
-</footer>
+    <span class="useful">Useful Links</span><br>
+    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+    <a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST2.html" target="_blank"> Page Editor Student 2</a><br>
+    <a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST3.html" target="_blank"> Page Editor Student 3</a><br>
+    <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST4.html" target="_blank"> Page Editor Student 4</a><br>
+  </footer>
+  <!-- end of footer code -->
 
-<footer class="access">
-  <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
-</footer>
-    </body>
+  <!-- accessibility statement footer -->
+<footer>
+    &copy; w1973296 Jodel Djan 2024
+  </footer>
+  
+  <footer class="access">
+    <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
+  </footer>
+</body>
 </html>
