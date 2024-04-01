@@ -85,24 +85,24 @@
 </head>
    
     <body>
-
-         <!-- nav bar code -->
+<!-- nav bar code -->
 <nav>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="" class="pic">
+    <div class="logo-container"> <!-- div class used to style the header -->
+        <img src="images/logo.png" alt="logo" class="pic">
         <h1>Responsible Consumption & Production</h1>
     </div>
-        <ul id = "top">
-            <li><a href="home"> Home</a></li>
+        <ul> <!-- unordered list used for nav bar -->
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/home.html" target="_blank"> Home</a></li> 
             <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
             <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
-            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM!/shop.html" target="_blank"> Shop</a></li>
             <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
-            <li><a href="team"> Team</a></li>
-            <li><a href="fedfor"> Feedback Form </a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/team.html" target="_blank"> Team</a></li>
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/feedback.html" target="_blank"> Feedback Form </a></li>
         </ul>
-  </nav>
-  <!-- end of nav bar -->
+</nav>
+
+<!-- end of nav bar code -->
 
         <!-- beginning of page editor -->
         <div class="bio">
@@ -141,36 +141,36 @@
 
     <script>
         
-        // Get the button:
-    let topbutton = document.getElementById("topBtn");
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.documentElement.scrollTop > 20) {
-        topbutton.style.display = "block";
-      } else {
-        topbutton.style.display = "none";
-      }
+        // back top button
+  let topbutton = document.getElementById("topBtn");
+  
+  // show the button when the user scrolls down 20px from the top of the document
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topbutton.style.display = "block";
+    } else {
+      topbutton.style.display = "none";
     }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.documentElement.scrollTop = 0; 
-    } 
+  }
+  
+  // Back to top button on click
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  } 
     </script>
 
-        <!-- footer containing page editors -->
-        <footer>
-            <span class="useful">Useful Links</span><br>
-            <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
-            <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
-            <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
-            <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
-          </footer>
-
-        <!-- footer containing accesibility statement -->
+<!-- footer code -->
+<footer>
+    <span class="useful">Useful Links</span><br>
+    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+    <a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST2.html" target="_blank"> Page Editor Student 2</a><br>
+    <a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST3.html" target="_blank"> Page Editor Student 3</a><br>
+    <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST4.html" target="_blank"> Page Editor Student 4</a><br>
+</footer>
+<!-- end of footer code -->
         <footer>
             &copy; w1973296 Jodel Djan 2024
         </footer>
