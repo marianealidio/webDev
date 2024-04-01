@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <style>
+        .thumbnail{
+            width: 100px;
+            margin-left: 30px;
+        }
+
+        .images{
+            text-align: center;
+        }
+
+        .description{
+            margin-bottom: 30px
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            font-size: 40px;
+        }
+
+        .changeDescription {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+
+       
+
+            
+    </style>
+ 
+</head>
+
+
+
+<body>
+    <header>
+        <!--nav bar code-->
+        <nav>
+            <div class="logo-container">
+                <img src="images/logo1.png" alt="" class="pic">
+                <h1>Responsible Consumption & Production</h1>
+            </div>
+                <ul id = "top">
+                    <li><a href="home"> Home</a></li>
+                    <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+                    <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+                    <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+                    <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+                    <li><a href="team"> Team</a></li>
+                    <li><a href="fedfor"> Feedback Form </a></li>
+                </ul>
+        </nav>
+        </header>
+        <!--end of nav bar code-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Team</h2>
+    <p id="p1">This is the first paragraph</p>
+    <p id="p2">This is the second paragraph</p>
+
+
+    <div class="images">
+        <img src="images/ayra.JPG" alt="Student 1" id="BigAvatarPic">
+        <div class="description"><span id="description">Student1</span></div>
+       
+
+
+        <div>
+
+        <img src="images/ayra.JPG"class="thumbnail" alt = "thumbnail picture of Avatar 1" onmouseover="changeBigAvatarPic(this.src); changeDescription(0);" onmouseout="resetDescription();">
+        <img src="images/jodel.JPG"class="thumbnail" alt = "thumbnail picture of Avatar 2" onmouseover="changeBigAvatarPic(this.src); changeDescription(1);" onmouseout="resetDescription();">
+        <img src="images/mariane.JPG"class="thumbnail" alt = "thumbnail picture of Avatar 3" onmouseover="changeBigAvatarPic(this.src);changeDescription(2);" onmouseout="resetDescription();">
+        <img src="images/hooria.png"class="thumbnail" alt = "thumbnail picture of Avatar 4" onmouseover="changeBigAvatarPic(this.src); changeDescription(3);" onmouseout="resetDescription();">
+        </div>
+    </div>
+
+        <!-- footer code -->
+    <footer>
+        <span class="useful">Useful Links</span><br>
+        <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+        <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
+        <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
+        <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
+    </footer>
+<!-- end of footer code -->
+
+    <script>
+        document.getElementById("p1").innerHTML = "About us";
+        document.getElementById("p2").innerHTML = "Hover over the images for details";
+
+        const myParagraphs = document.getElementsByTagName("p");
+        for (let i=0; i<myParagraphs.length; i++) {
+            myParagraphs[i].style.color = "green";
+            myParagraphs[i].style.fontSize = "20px";
+            myParagraphs[i].style.textAlign = "center";
+            myParagraphs[i].style.fontFamily = "cursive";
+        }
+
+
+        function changeBigAvatarPic(source) {
+            document.getElementById("BigAvatarPic").src =source;
+        }
+        
+        function changeDescription(index){
+            const descriptions = ["Ayra ", "Jodel ", "Mariane ", "Hooria "];
+            const description2 = ["Role student 2", "Role student 4", "Role student1", "Role Student 3"]
+            const task2Description = ["Designed and implemented pages:", "Designed and implemented pages:", "Designed and implemented pages:", "Designed and implemented pages:"];
+            const taskDescriptions = ["Feedback form | Home page | website template | navigation bar", "Gallery | Sitemap", "Splash Screen | Shop", "User profile | Team"];
+            document.getElementById("description").innerHTML = descriptions[index] +  "<br>" +  description2[index] + "<br>" + task2Description[index] + "<br>" + taskDescriptions[index];
+        }
+        
+
+        
+
+        function resetDescription() {
+            document.getElementById("description").innerHTML = "Student";
+        }
+
+       
+    </script>
+
+
+   
+</body>
+
+</html>
+

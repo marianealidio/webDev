@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+   
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <style>
+
+body{
+    background-color: mintcream;
+    font-family:Garamond (serif);
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    background-color: rgb(8, 80, 128);
+    width: auto;
+}
+ul{
+    background-color: rgb(8, 80, 128);
+    width: auto;
+    padding: 15px;
+    margin-bottom: auto;
+}
+
+nav {
+    background-color: #006a4e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a:link { 
+    color: whitesmoke; 
+    padding: 15px;
+    border-radius: 8px;
+
+} 
+
+nav a:hover { 
+    color: green; 
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logo-container {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.pic {
+    width: 80px;
+}
+
+h1{
+    display:inline-block;
+    margin: 0;
+    color: whitesmoke;
+}
+
+a:visited{
+    color:beige;
+}
+
+footer{
+    background-color: #006a4e;
+    color: whitesmoke;
+    text-align:center;
+    width: 100%;
+    padding: 15px 0; /* Add padding to the top and bottom */
+}
+
+footer a {
+    background-color: #006a4e;
+    color: whitesmoke;
+    text-align:center;
+}
+
+footer a:visited{
+    color: beige;
+}
+
+.useful{
+    font-weight: bold;
+}
+
+
+        h2 {
+            color: black;
+            padding: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+
+        .question-set {
+            width: 30%; /* Adjust width for smaller sizes */
+    
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set2 {
+            width: 30%; /* Adjust width for smaller sizes */
+     
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set3 {
+            width: 30%; /* Adjust width for smaller sizes */
+     
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set4 {
+            width: 30%; /* Adjust width for smaller sizes */
+           
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set5 {
+            width: 30%; /* Adjust width for smaller sizes */
+           
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set6 {
+            width: 30%; /* Adjust width for smaller sizes */
+           
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-set7 {
+            width: 30%; /* Adjust width for smaller sizes */
+           
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .progress-text {
+            clear: both; /* Clear floats */
+            margin-top: 20px; /* Add margin at the top */
+            font-size: 18px; /* Adjust font size */
+        }
+
+        .progress-bar {
+            width: 100%; /* Set width to 100% */
+            background-color: #ddd; /* Light gray background */
+            margin-top: 10px; /* Add margin at the top */
+        }
+
+        .progress-bar-fill {
+            height: 20px; /* Set height of the progress bar */
+            background-color: orange; /* Orange fill color */
+        }
+
+
+    </style>
+</head>
+
+<body>
+<header>
+<!--nav bar code-->
+<nav>
+    <div class="logo-container">
+        <img src="images/logo1.png" alt="" class="pic">
+        <h1>Responsible Consumption & Production</h1>
+    </div>
+        <ul id = "top">
+            <li><a href="home"> Home</a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
+            <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
+            <li><a href="team"> Team</a></li>
+            <li><a href="fedfor"> Feedback Form </a></li>
+        </ul>
+</nav>
+</header>
+<!--end of nav bar code-->
+<br>
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h2>User profile</h2>
+
+    <div class="question-set">
+        <p>
+            <strong>Q1</strong>
+            <span class="question" id="Q1"></span>
+            <span id="answer1"></span>
+        </p>
+
+        <p>
+            <strong>1b</strong>
+            <span class="question" id="1b"></span>
+            <span id="answer1b"></span>
+        </p>
+
+        <p>
+            <strong>1c</strong>
+            <span class="question" id="1c"></span>
+            <span id="answer1c"></span>
+        </p>
+
+        <p>
+            <strong>1d</strong>
+            <span class="question" id="1d"></span>
+            <span id="answer1d"></span>
+        </p>
+
+        <button id="nextButton1">Next</button>
+        
+        
+    </div>
+
+    <div class="question-set2">
+        <p>
+            <strong>Q2</strong>
+            <span class="question" id="Q2"></span>
+            <span id="answer2"></span>
+        </p>
+
+      
+        <button id="nextButton2">Next</button>
+        
+    </div>
+
+        <div class="question-set3">
+        <p>
+            <strong>Q3</strong>
+            <span class="question" id="Q3"></span>
+            <span id="answer3"></span>
+        </p>
+       
+        <button id="nextButton3">Next</button>
+        
+       
+    </div>
+
+    <div class="question-set4">
+        <p>
+            <strong>Q4</strong>
+            <span class="question" id="Q4"></span>
+            <span id="answer4"></span>
+           
+        </p>
+
+        <button id="nextButton4">Next</button>
+    </div>
+       
+
+    <div class="question-set5">
+        <p>
+            <strong>Q5</strong>
+            <span class="question" id="Q5"></span>
+            <span id="answer5"></span>
+           
+        </p>
+        <button id="nextButton5">Next</button>
+    </div>
+
+    <div class="question-set6">
+        <p>
+            <strong>Q6</strong>
+            <span class="question" id="Q6"></span>
+            <span id="answer6"></span>
+           
+        </p>
+        <button id="nextButton6">Next</button>
+    </div>
+
+
+
+   
+
+
+    <!-- Progress Feedback -->
+    <div class="progress-text">Profile completion progress:</div>
+    <div class="progress-bar">
+    <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+    </div>
+
+    <!-- footer code -->
+<footer>
+    <span class="useful">Useful Links</span><br>
+    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+    <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
+    <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
+    <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
+</footer>
+<!-- end of footer code -->
+
+    <script>
+        
+
+        const questions = [];
+        questions[0] = "1/9. What is your name?";
+        questions[1] = "2/9. What is your surname?";
+        questions[2] = "3/9. What is your email address?";
+        questions[3] = "4/9. Whats your occupations?";
+        questions[4] = "5/9. How often do you use sustainable products, 1-10?";
+        questions[5] = "6/9. Would you like to know more about us?";
+        questions[6] = "7/9. Would you like to make a monthy donation?";
+        questions[7] = "8/9. Have you volunteered to help improve sustainability";
+        questions[8] = "9/9. How many sustainable products do you use";
+
+
+  
+
+        
+
+
+
+
+        updateProgress(25); // Update progress to 25%
+
+    
+
+        const userAnswers = [];
+        const questionText = [];
+
+
+
+        for (i=0; i<4; i++){
+            questionText.push(questions[i]);
+            userAnswers.push(prompt(questions[i]));
+            document.getElementsByClassName("question").innerHTML = questionText[i];
+        }
+
+        for (i=4; i<9; i++){
+            questionText.push(questions[i]);
+            document.getElementsByClassName("question").innerHTML = questionText[i];
+        }
+
+
+
+
+
+
+        const questionElements = document.getElementsByClassName("question");
+        for (let i = 0; i < questionElements.length; i++) {
+        questionElements[i].innerHTML = questionText[i];
+        }
+
+        document.getElementById("answer1").innerHTML = userAnswers[0];
+        document.getElementById("answer1b").innerHTML = userAnswers[1];
+        document.getElementById("answer1c").innerHTML = userAnswers[2];
+        document.getElementById("answer1d").innerHTML = userAnswers[3];
+        document.getElementById("answer2").innerHTML = userAnswers[4];
+        document.getElementById("answer3").innerHTML = userAnswers[5];
+        document.getElementById("answer4").innerHTML = userAnswers[6];
+        document.getElementById("answer5").innerHTML = userAnswers[7];
+        document.getElementById("answer6").innerHTML = userAnswers[8];
+        
+       
+
+
+
+
+        let currentStep = 1; // To keep track of current step
+
+// Function to handle next button click
+function handleNextButtonClick() {
+    if (currentStep === 1) {
+        let userAnswer2 = prompt("5/9. How often do you use sustainable products, 1-10?");
+        document.getElementById("Q2").innerHTML = "5/9. How often do you use sustainable products, 1-10?";
+        document.getElementById("answer2").innerHTML = userAnswer2;
+        updateProgress(30); // Update progress to 30%
+        currentStep++; // Move to the next step
+    } else if (currentStep === 2) {
+        let userAnswer3 = prompt("6/9. Would you like to know more about us?");
+        document.getElementById("Q3").innerHTML = "6/9. Would you like to know more about us?";
+        document.getElementById("answer3").innerHTML = userAnswer3;
+        updateProgress(50); // Update progress to 50%
+        currentStep++; //Move to next step
+    } else if (currentStep === 3) {
+        let userAnswer4 = prompt("7/9. Would you like to make a monthy donation?");
+        document.getElementById("Q4").innerHTML = "7/9. Would you like to make a monthy donation?";
+        document.getElementById("answer4").innerHTML = userAnswer4;
+        updateProgress(70); // Update progress to 70%
+        currentStep++;
+    }  else if (currentStep === 4) {
+        let userAnswer5 = prompt("8/9. Have you volunteered to help improve sustainability");
+        document.getElementById("Q5").innerHTML = "8/9. Have you volunteered to help improve sustainability";
+        document.getElementById("answer5").innerHTML = userAnswer5;
+        updateProgress(80); // Update progress to 80%
+        currentStep++;
+
+    }   else if (currentStep === 5) {
+        let userAnswer6 = prompt("9/9. How many sustainable products do you use");
+        document.getElementById("Q6").innerHTML = "9/9. How many sustainable products do you use";
+        document.getElementById("answer6").innerHTML = userAnswer6;
+        updateProgress(100); // Update progress to 100%
+        currentStep++;
+    
+        } else if (currentQuestion === 6) {
+        // Assuming all questions have been answered, update progress to 100%
+        progressBar(100);
+        currentQuestion++; // Move to the next 
+    }
+
+
+    }
+
+    // Function to update the progress bar fill width
+    function updateProgress(percentage) {
+            const progressBarFill = document.getElementById("progress-bar-fill");
+            progressBarFill.style.width = percentage + "%";
+
+
+        if (percentage === 100) {
+            document.querySelector('.progress-text').textContent = "Profile Complete";
+
+        } else {
+            document.querySelector('.progress-text').textContent = "Profile completion progress:";
+        }
+    }
+
+        
+
+
+  
+        
+
+
+// Add event listener to the next button
+document.getElementById("nextButton1").addEventListener("click", handleNextButtonClick);
+
+
+document.getElementById("nextButton2").addEventListener("click", handleNextButtonClick);
+
+
+document.getElementById("nextButton3").addEventListener("click", handleNextButtonClick);
+document.getElementById("nextButton4").addEventListener("click", handleNextButtonClick)
+document.getElementById("nextButton5").addEventListener("click", handleNextButtonClick)
+
+
+   
+
+    </script>
+</body>
+</html>
+
+
+
