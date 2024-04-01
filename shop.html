@@ -69,7 +69,7 @@
 			margin-right: 5px;
 			margin-top: 80px;
 		}
-		.addQuantity,.size{
+		.addQuantity,.option{
 			font-family: Courier New;
 			font-size: 15px;
 			width: 145px;
@@ -137,13 +137,13 @@
 <h2> Shop </h2>  
 <div class = "allProducts">
 	 <div class = "products">  
-	 <img src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="300" height="300" >
-	 <div class = "item"> Blue Shirt </div>
-	<div class = "price"> &#163; 10 </div>
+	 <img id ="blue" src = "blue2.jpeg" alt = "A blue shirt with fairtrade logo" width="300" height="300" >
+	 <p class = "item"> Blue Shirt </p>
+	<p class = "price" id ="price"> &#163; 10 </p>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity >
 		<br>
-		<label for="size" class="size" >Size:</label>
+		<label for="size" class="option">Size:</label>
 		<select name="size" class ="size" id="size">
 		<option value="extra small">Extra Small</option>
         <option value="small" selected>Small</option>
@@ -151,17 +151,17 @@
         <option value="large">Large</option>
         <option value="extra large">Extra Large</option>
         </select>
-		<input class="addButton" type="button" value="Add to Basket" name="addBlue">
+		<input class="addButton" type="button" value="Add to Basket" name="addBlue" onclick="addToBasket(getElementById('blue'),'Blue Shirt',getElementById('size').value,getElementById('quantity').value, '£10')" >
 
     </div>
      <div class = "products" id= "GreenShirt">  
-	 <img src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="300" height="300" >
+	 <img id = "green" src = "green2.jpeg" alt = "A green shirt with fairtrade logo" width="300" height="300" >
 	 <div class = "item" name = "Green Shirt" > Green Shirt </div>
 	 <div class = "price"> &#163; 10</div>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity >
 		<br>
-		<label for="size" class="size" >Size:</label>
+		<label for="size" class="option" >Size:</label>
 		<select name="size" class ="size" id="size">
 		<option value="extra small">Extra Small</option>
         <option value="small" selected>Small</option>
@@ -169,16 +169,16 @@
         <option value="large">Large</option>
         <option value="extra large">Extra Large</option>
         </select>
-        <input class ="addButton" type="button" value="Add to Basket" name="addGreen">
+        <input class ="addButton" type="button" value="Add to Basket" name="addGreen" onclick="addToBasket(getElementById('green'),'Green Shirt',getElementById('size').value,getElementById('quantity').value, '£10')"> 
     </div>
     <div class = "products">  
-	 <img src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="300" height="300" >
+	 <img id = "red" src = "red2.jpeg" alt = "A bred shirt with fairtrade logo"width="300" height="300" >
 	 <div class = "item"> Red Shirt </div>
 	 <div class= "price"> &#163; 10 </div>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity >
 		<br>
-		<label for="size" class="size" >Size:</label>
+		<label for="size" class="option" >Size:</label>
 		<select name="size" class ="size" id="size">
 		<option value="extra small">Extra Small</option>
         <option value="small" selected>Small</option>
@@ -186,46 +186,44 @@
         <option value="large">Large</option>
         <option value="extra large">Extra Large</option>
         </select>
-		<input class ="addButton" type="button" value="Add to Basket" name="addRed">
+		<input class ="addButton" type="button" value="Add to Basket" name="addRed" onclick="addToBasket(getElementById('red'),'Red Shirt',getElementById('size').value,getElementById('quantity').value, '£10')">
     </div>
     <div class = "products">  
-	 <img src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="300" height="250" >
+	 <img id = "toilet roll" src = "toilet roll.jpeg" alt = "A reusable toilet roll"width="300" height="250" >
 	 <div class = "item"> Reusable Toilet Roll </div>
 	 <div class= "price"> &#163; 2 </div>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity >
 		 <br>
-		<label for="green">Green</label>
-		<input type="radio" name="green" id="green" 
-		value="green" checked>
-		<label for="violet">Violet</label>
-		<input type="radio" name="violet" id="violet" 
-		value="violet">
-		<label for="yellow">Yellow</label>	
-		<input type="radio" name="yellow" id="yellow" 
-		value="yellow">
-		<input class ="addButton" type="button" value="Add to Basket" name="addBlue">
+		 <br>
+		 <label for="color" class ="option" > Color :</label>
+		 <select name="color" id= "color"  multiple size= "3">
+         <option value="green"> Green</option>
+         <option value="violet" selected> Violet</option>
+         <option value="yellow"> Yellow</option>
+         </select>
+		<input class ="addButton" type="button" value="Add to Basket" name="addBlue" onclick="addToBasket(getElementById('toilet roll'),' Reusable Toilet Roll',getElementById('color').value,getElementById('quantity').value, '£2')">
     </div>
     <div class = "products">  
-	 <img src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="300" height="300" >
+	 <img id ="ecobag" src = "ecobag.jpeg" alt = "Aan ecobag with slogan "width="300" height="300" >
 	 <div class = "item">Slogan Ecobag </div>
 	 <div class= "price"> &#163; 5 </div>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity > <br>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBag">	 
+ 		<input class ="addButton" type="button" value="Add to Basket" name="addBlue" onclick="addToBasket(getElementById('ecobag'),' Slogan Ecobag','',getElementById('quantity').value, '£2')">	 
     </div>
     <div class = "products">  
-	 <img src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="300" height="300" >
+	 <img id = "bamboo" src = "giftset.jpeg" alt = "A bamboo beauty gift set"width="300" height="300" >
 	 <div class = "item" id = "bamboo"> Bamboo Gift Set </div>
 	 <div class= "price"> &#163; 15 </div>
 	 	<label class = addQuantity for ="quantity"> Quantity </label>
 		<input class = addQuantity type = "number" id ="quantity" name = quantity > <br>
-		<input class ="addButton" type="button" value="Add to Basket" name="addBamboo" >
+		<input class ="addButton" type="button" value="Add to Basket" name="addBlue" onclick="addToBasket(getElementById('bamboo'),' Bamboo Gift Set',' ' ,getElementById('quantity').value, '£15')">
 	</div>
 </div>
     <div class = "basket">    		
 		<h3> Your Basket :</h3>
-    	<div class ="basketContainer"> </div>
+    	<div id="basketContainer"> </div>
     	<div id="totalPrice"></div>
     	<a href="order_form.html" >
     	<input class ="checkout" type="button" value="Checkout">
@@ -234,5 +232,28 @@
 </div>
 </main>
 </body>
+<script>
+	function addToBasket(image,name,option,quantity,price) {
+		//var product_image = image;
+		//var product_source = image.src;
+		var product_name = name;
+		var product_option = option;
+		var product_quantity = quantity;
+		var product_price = price;
+		var basketContainer = document.getElementById('basketContainer');
+
+		//	I tried adding the picture using this but it is sending an error 
+		//var purchase = "<img src = " + product_source + " height = "10" width ="10" >" + "&nbsp;&nbsp;&nbsp;" 
+		// I also tried this but it changes the original picture displayed first instead so image here is not used  		
+		// product_image.height = 5;
+		// product_image.width = 3;
+		//var purchase = "<img src = " + product_source + ">" + "&nbsp;&nbsp;&nbsp;"
+
+		var purchase = product_name + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Q: "+product_quantity + "<br>"
+		 + product_option + "</br>"+ product_price + "<br>" + " ---------------------------" + "<br>";
+		basketContainer.innerHTML+= purchase;
+	}
+
+</script>
 
 </html>
