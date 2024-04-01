@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+</head>
+<body>
+    <h1>Order Form</h1>
+    <form id="orderForm" name ="orderForm">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <br>
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstName" id="firstname" placeholder="Enter Your first name" required>
+            <br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastName" id="lastname" placeholder="Enter Your last name" required>
+            <br><br>
+            <label for="dob">Date of birth: (optional) </label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth">
+            <br><br>
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email" required>  
+            <br><br>
+            <label for="tel">Telephone number:</label>
+            <input type="tel" id="tel" name="tel" placeholder="+12 1234 123456"  required>
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+            <br><br>
+            <label for="address">First Line of Address:</label>
+            <input type="text" name="address" id="address" placeholder="House no. / Street / Town / City" required>
+            <br><br>
+            <label for="postcode">Postcode:</label>
+            <input type="text" name="postcode" id="postcode" placeholder="AB1 1AB" required>
+        </fieldset>
+        <fieldset>
+            <label for="content">Other Requests:</label>
+            <textarea id="content" name="content" rows="5" cols="20"></textarea><br>
+        </fieldset>
+        <a href = "order_summary">
+        <input class="checkout" type="button" value="Complete Purchase" onclick="checkInputs(getElementById('orderForm'))">
+    </a>
+    </form>
+</body>
+</html>
+<script>
+
+    function checkInputs(form) {
+        if (form.firstName.value == "")
+            alert ("Please put your firstname") 
+        else if (form.lastName.value == "")
+            alert ("Please put your lastname")
+        else if (form.email.value == "")
+            alert ("Please put your date of birth")
+        else if (form.tel.value == "")
+            alert ("Please put your telephone number") 
+        else if (form.address.value == "")
+            alert ("Please put your address") 
+        else if (!form.email.value.includes('@'))
+             alert ("Please put correct email adress with @")
+        else
+            alert ("Form is completed correctly")
+            openSummary() ;
+    }
+    function openSummary() {
+        window.location.href = "order_summary.html"
+    }
+</script>
+
