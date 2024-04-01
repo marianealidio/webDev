@@ -54,22 +54,38 @@
 <script>
 
     function checkInputs(form) {
-        if (form.firstName.value == "")
-            alert ("Please put your firstname") 
-        else if (form.lastName.value == "")
-            alert ("Please put your lastname")
-        else if (form.email.value == "")
-            alert ("Please put your date of birth")
-        else if (form.tel.value == "")
-            alert ("Please put your telephone number") 
-        else if (form.address.value == "")
-            alert ("Please put your address") 
-        else if (!form.email.value.includes('@'))
-             alert ("Please put correct email adress with @")
-        else
-            alert ("Form is completed correctly")
-            openSummary() ;
+        check = false;
+
+        if (form.firstName.value == ""){
+            alert ("Please put your firstname");
+            check = false; 
+        }
+        else if (form.lastName.value == ""){
+            alert ("Please put your lastname");
+            check = false;
+        }
+        else if (form.email.value == ""){
+            alert ("Please put your date of birth");
+            check = false;
+        }
+        else if (form.tel.value == ""){
+            alert ("Please put your telephone number"); 
+            check = false;
+        }
+        else if (form.address.value == ""){
+            alert ("Please put your address"); 
+           check = false;
+        }   
+        else if (!form.email.value.includes('@')){
+             alert ("Please put correct email adress with @");
+             check = false;
+        }
+        if (check) {
+            alert ("Form is completed correctly");
+            openSummary();
+        }
     }
+
     function openSummary() {
         window.location.href = "order_summary.html"
     }
