@@ -7,6 +7,7 @@
 <head>
     <title>Gallery</title>
         <style>
+          /*Container for all the images*/
           .box{
             margin:auto;
             width: 50%;
@@ -14,29 +15,32 @@
             margin-top: 180px;
           }
 
+          /*Container for thumbnails only*/
           .image-box{
             width: 100%;
           }
 
+          /*Styling for the thumbnails*/
           .image-box input[type="radio"]{
-            width: 170px;
+            width: 170px;/*Thumbnail dimensions*/
             height: 100px;
-            display: inline-block;
+            display: inline-block;/*Layout of thumbnails*/
             border: 1px solid #555;
             outline: none;
-            appearance: none;
-            cursor: pointer;
-            box-shadow: 0 0 2px #000;
-            -webkit-transition: all 0.3s ease-in-out;
+            appearance: none;/*Changes the look of the radio buttons*/
+            cursor: pointer;/*Type of cursor*/
+            box-shadow: 0 0 2px #000;/*Shadow behind each thumbnail*/
+            -webkit-transition: all 0.3s ease-in-out;/*Animation on hover*/
             transition: all 0.3s ease-in-out;
           }
 
+          /*Styling for the thumbnails on hover*/
           .image-box input[type="radio"]:hover{
             transform: scale(1.1);
             box-shadow: 0 0 5px #000;
           }
         
-          /*Adding images to the larger box*/
+          /*Assigning images to the larger box*/
           #img_1{
             background-image: url(images/community.jpg);
             background-size: cover;
@@ -77,10 +81,11 @@
             background-size: cover;
           }
 
+          /*Styling for the larger image*/
           .background{
             width: 100%;
             height: 500px;
-            margin-top: 60px;
+            margin-top: 60px;/*Separation from the thumbnails*/
             border: 1px solid #222;
             box-shadow: 0 0 5px #000;
             -webkit-transition: all 0.3s ease-in-out;
@@ -88,6 +93,7 @@
             margin-bottom: 10px;
           }
 
+          /*Controls the image that shows after clicking on each thumbnail*/
           #img_1:checked ~ .background, .text-box{
             background-image: url(images/community.jpg);
             background-size: cover;
@@ -128,6 +134,7 @@
             background-size: cover;
           }
 
+          /*Container for text description*/
           .text-box {
             margin: 100px 50px;
             width: 200px;
@@ -139,12 +146,15 @@
             padding-right: 20px;
             overflow: hidden;
             transition: .9s ease-in-out;
+            font-size: 15px;
           } /* CSS code from W3 Schools */
           
+          /*Text box styling*/
           .background:hover .text-box {
             width: 250px;
           }
 
+          /*Back to top button styling*/
           #topBtn{
               display: none; /* Hidden by default */
               position: fixed; /* Fixed/sticky position */
@@ -161,53 +171,111 @@
               font-size: 15px; /* Increase font size */
         } /* CSS code from W3 Schools */
 
-#topBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-} /* CSS code from W3 Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_slideright */
+        #topBtn:hover {
+          background-color: #555; /* Add a dark-grey background on hover */
+        } /* CSS code from W3 Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_slideright */
 
-        .clrbtn-container{
-          border: 2px solid #333;
+        /*Change font button container styling*/
+        .font-container{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1200px;
+          flex-direction: column;
+          margin: 20px auto;
+          padding: 0 20px;
+        }
+       
+       
+        .font-container .fnt-button{
+          width: 100%;
+          margin-bottom: 20px;
         }
 
-        .color{
-          display: table-cell;
-          width: 50px;
-          height: 50px;
-          margin: 0 1px;
+        .font-container .fnt-button .ftbtn{
+          padding: 0 10px;
+          display: inline-flex;
+          background: #d08989;
+          color: #fff;
+          
           cursor: pointer;
-          border: 2px solid #fff;
+          margin: 10px auto;
         }
 
-        .clr1{
-          background-color: aquamarine;
+        .font-container .fnt-button .ftbtn:hover{
+          background: #212020;
+
         }
 
-        .clr1{
-          background-color: brown;
+        .font-container .text-box {
+          transition: 0.5s;
         }
+
+        .font-container p{
+          margin: 10px auto;
+        }
+
+        /*Random background button container styling*/
+        .random button{
+          font-size: 15px;
+          background-color: #759fde;
+          border: 5px solid #5493b5;
+          color: #fff;
+          border-radius: 50px;
+          cursor: pointer;
+          outline: none;
+          letter-spacing: 1.5px;
+         
+         margin: 0 150px;
+         
+        }
+
+        /*Provided background colour change button container styling*/
+        .colorbg{
+          border-radius: 50%;
+          padding: 10px 33px;
+          background: var(--color);
+          cursor: pointer;
+          margin: 0 50px;
+          display: inline-block;
+        }
+
+        .btn{
+         
+          padding: 10px 33px;
+          background: var(--color);
+          cursor: pointer;
+          
+        }
+
+        .btn1 {--color: cadetblue;}
+        .btn2 {--color: brown;}
+        .btn3 {--color: burlywood;}
 
         </style>
 
    </head>
 
-    <body>
+<body>
       <!-- nav bar code -->
 <nav>
-  <div class="logo-container">
-    <img src="images/logo.png" alt="" class="pic">
+  <div class="logo-container"> <!-- div class used to style the header -->
+      <img src="images/logo.png" alt="logo" class="pic">
       <h1>Responsible Consumption & Production</h1>
   </div>
-      <ul id = "top">
-          <li><a href="home"> Home</a></li>
+      <ul> <!-- unordered list used for nav bar -->
+          <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/home.html" target="_blank"> Home</a></li> 
           <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
           <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
-          <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+          <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM!/shop.html" target="_blank"> Shop</a></li>
           <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
-          <li><a href="team"> Team</a></li>
-          <li><a href="fedfor"> Feedback Form </a></li>
+          <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/team.html" target="_blank"> Team</a></li>
+          <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/feedback.html" target="_blank"> Feedback Form </a></li>
       </ul>
 </nav>
-<!-- end of nav bar -->
+
+<!-- end of nav bar code -->
       <!-- start of gallery -->
         
     <!-- Container for thumbnail images -->
@@ -221,33 +289,68 @@
         <input type="radio" id="img_6" name="image">
         <input type="radio" id="img_7" name="image">
         <input type="radio" id="img_8" name="image">
-          
-       <!-- Larger image with text -->
-        <div class="background">
-          <div class="text-box">
-        <p class="text">Responsible Consumption & Production<p>
-        <p>These are ways we can all play a part in reducing overconsumption and it's consequences</p>
       </div>
-        </div>
-          </div>
     </div>
+
+       <!-- Larger image with text -->
+      <div class="background">
+          <div class="text-box" id="chngFont">
+            <p class="text">Responsible Consumption & Production<p>
+            <p>These are ways we can all play a part in reducing overconsumption and it's consequences</p>
+          </div>
+      </div>
+          
 
     <div>
       <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
-  </div>
+    </div>
 
   <!-- colour change buttons -->
-  <div class="clrbtn-container">
-    <span id="1" onclick="color(this)" class="color clr1"></span>
-    <span id="2" onclick="color(this)" class="color clr2"></span>
+
+  <div class="colorbg">
+    <p><b>Select to change background colour</b></p>
+    <button class="btn btn1"></button>
+    <button class="btn btn2"></button>
+    <button class="btn btn3"></button>
   </div>
 
+  <!-- random colour buttons -->
+  <div class="random">
+    <button onclick="randomclr()">RANDOM</button>
+  </div>
+  
 
   <!-- font change buttons -->
-
+  <div class="font-container">
+    <div class="fnt-button">
+      <p><b>Change font size</b></p>
+      <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '10px'">Decrease</span>
+      <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '20px'">Increase</span>
+      <span class="ftbtn" onclick="document.getElementById('chngFont').style.fontSize = '15px'">Reset</span>
+    </div>
+  </div>
 
   <script>
-    
+    // change background to random colour
+    function randomclr(){
+      document.body.style.backgroundColor=
+      'rgb('+ Math.round(Math.random() * 255)+
+      ','+ Math.round(Math.random() * 255)+
+      ','+ Math.round(Math.random() * 255)+')';
+    } 
+    // code from: https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/tutorials/Tutorial5.html and https://youtu.be/xnUrOjV6t6g?si=sFtx9hXMDnn9xijA
+
+    // change background to named colour
+    const buttons = document.getElementsByClassName("btn");
+    for (const btn of buttons){
+      btn.addEventListener("click", function(){
+        const btnStyle = getComputedStyle(this);
+        const btnBackgroundcolour = btnStyle["backgroundColor"];
+        document.body.style.backgroundColor = btnBackgroundcolour;
+      })
+    }
+
+    // back top button
   let topbutton = document.getElementById("topBtn");
   
   // show the button when the user scrolls down 20px from the top of the document
@@ -266,21 +369,20 @@
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   } 
+
+ 
   </script>
-    <!-- footer code -->
- <footer>
+     <!-- footer code -->
+<footer>
   <span class="useful">Useful Links</span><br>
   <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
-  <a href="PE2" target="_blank"> Page Editor Student 2</a><br>
-  <a href="PE3" target="_blank"> Page Editor Student 3</a><br>
-  <a href="PE4" target="_blank"> Page Editor Student 4</a><br>
+  <a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST2.html" target="_blank"> Page Editor Student 2</a><br>
+  <a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST3.html" target="_blank"> Page Editor Student 3</a><br>
+  <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST4.html" target="_blank"> Page Editor Student 4</a><br>
 </footer>
 <!-- end of footer code -->
 
-<!-- Change background colour on click -->
-
-
-<!-- accesibility statement footer -->
+<!-- accessibility statement footer -->
 <footer>
   &copy; w1973296 Jodel Djan 2024
 </footer>
@@ -288,5 +390,5 @@
 <footer class="access">
   <a href="https://www.westminster.ac.uk/about-us/our-university/corporate-information/policies-and-documents-a-z/accessibility-statements-for-university-websites/accessibility-statement-for-sits-evision">Accessibility Statement</a>
 </footer>
-    </body>
+</body>
 </html>
