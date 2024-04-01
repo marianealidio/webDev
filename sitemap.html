@@ -7,6 +7,7 @@
     <head>
     <title>Sitemap</title>
     <style>
+        /* Change appearance on hover*/
        #siteMap g:hover rect {
         fill: rgb(109, 132, 109);
         stroke: black;
@@ -17,14 +18,12 @@
         font-weight: bold;
        }
 
+       /* Detach from nav bar */
        #siteMap{
         margin-top: 160px;
        }
 
-       body{
-        background-color: whitesmoke;
-       }
-
+       /* Align accessibility statement to centre */
        .access{
         text-align: center;
        }
@@ -53,29 +52,31 @@
 </head>
 
 <body>
-    <!-- nav bar code -->
+   <!-- nav bar code -->
 <nav>
-    <div class="logo-container">
-        <img src="images/logo.png" alt="" class="pic">
+    <div class="logo-container"> <!-- div class used to style the header -->
+        <img src="images/logo.png" alt="logo" class="pic">
         <h1>Responsible Consumption & Production</h1>
     </div>
-        <ul id = "top">
-            <li><a href="home"> Home</a></li>
+        <ul> <!-- unordered list used for nav bar -->
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/home.html" target="_blank"> Home</a></li> 
             <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/sitemap.html" target="_blank"> Sitemap </a></li>
             <li><a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html" target="_blank"> Gallery</a></li>
-            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html" target="_blank"> Shop</a></li>
+            <li><a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM!/shop.html" target="_blank"> Shop</a></li>
             <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/profile.html" target="_blank"> User Profile </a></li>
-            <li><a href="team"> Team</a></li>
-            <li><a href="fedfor"> Feedback Form </a></li>
+            <li><a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/team.html" target="_blank"> Team</a></li>
+            <li><a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/feedback.html" target="_blank"> Feedback Form </a></li>
         </ul>
 </nav>
-<!-- end of nav bar -->
+
+<!-- end of nav bar code -->
 
 <!-- beginning of sitemap -->
     <div class="siteMap">
         <svg id="siteMap" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 300"> <!-- To ensure it changes with the webpage size -->
 
             <!-- Sitemap nodes -->
+            <!-- Splash screen node -->
             <g id="splash" >
                 <rect
                 x = "200" y = "10" rx="10" ry="10"
@@ -89,6 +90,7 @@
                 <line id="splashLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
                 x1="250" y1="50" x2="250" y2="30"></line></g>
 
+            <!-- Home node -->
            <g id="home" >
             <rect
             x = "200" y = "40" rx="10" ry="10"
@@ -102,6 +104,7 @@
             <line id="homeLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="250" y1="80" x2="250" y2="60"></line></g>
 	       
+            <!-- Gallery node -->
             <g id="gallery" >
           <rect
             x = "200" y = "80" ry="10" rx="10"
@@ -112,6 +115,7 @@
             font-family="Candara" text-anchor="middle">
             <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html">Gallery</a></text></g>
 
+            <!-- Shop node -->
             <g id="shop" >
             <rect
             x = "70" y = "80" ry="10" rx="10"
@@ -120,11 +124,12 @@
             />
             <text fill="#000" font-size="8" x = "118" y = "92"
             font-family="Candara" text-anchor="middle">
-            <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/gallery.html">Shop</a></text></g>
+            <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/shop.html">Shop</a></text></g>
 
             <line id="shopLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="170" y1="90" x2="199" y2="90"></line>
 
+            <!-- Team node -->
             <g id="team">
             <rect
             x = "330" y = "80" ry="10" rx="10"
@@ -138,7 +143,7 @@
             <line id="teamLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="300" y1="90" x2="330" y2="90"></line>
            
-           
+           <!-- User profile node -->
            <g id="userProfile">
 
             <rect
@@ -154,6 +159,7 @@
             <line id="userLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="100" y1="120" x2="100" y2="100"></line></g>
 
+            <!-- Feedback node -->
             <g id="feedbackForm">
             <rect 
             x = "180" y = "120" ry="10" rx="10"
@@ -167,6 +173,7 @@
             <line id="feedLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="150" y1="130" x2="180" y2="130"></line></g>
 
+            <!-- Content page nodes -->
             <g  id="CP1">
               <line id="cnLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="260" y1="170" x2="420" y2="170"></line>   
@@ -217,6 +224,7 @@
             <line id="contentLine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
 		    x1="380" y1="160" x2="380" y2="100"></line></g>
 
+            <!-- Page editor nodes -->
             <g  id="PE1">
                 <line id="PELine" stroke="#d0ce51" stroke-width="1.5" stroke-linecap="round" 
               x1="260" y1="210" x2="420" y2="210"></line>   
@@ -290,33 +298,35 @@
                 document.location.href="sitemap.html";
         });
         
-        // Get the button:
-    let topbutton = document.getElementById("topBtn");
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.documentElement.scrollTop > 20) {
-        topbutton.style.display = "block";
-      } else {
-        topbutton.style.display = "none";
-      }
+     // Back top button
+  let topbutton = document.getElementById("topBtn");
+  
+  // Show the button when the user scrolls down 20px from the top of the document
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topbutton.style.display = "block";
+    } else {
+      topbutton.style.display = "none";
     }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    } 
+  }
+  
+  // Back to top button on click
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  } 
+
     </script>
 
     <!-- footer code -->
- <footer>
+<footer>
     <span class="useful">Useful Links</span><br>
-    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a>
-    <a href="PE2" target="_blank"> Page Editor Student 2</a>
-    <a href="PE3" target="_blank"> Page Editor Student 3</a>
-    <a href="PE4" target="_blank"> Page Editor Student 4</a>
+    <a href="https://w1974040.users.ecs.westminster.ac.uk/HJAM/pageEditor_ST1.html" target="_blank"> Page Editor Student 1</a><br>
+    <a href="https://w1947450.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST2.html" target="_blank"> Page Editor Student 2</a><br>
+    <a href="https://w1975941.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST3.html" target="_blank"> Page Editor Student 3</a><br>
+    <a href="https://w1973296.users.ecs.westminster.ac.uk/HJAM!/pageEditor_ST4.html" target="_blank"> Page Editor Student 4</a><br>
 </footer>
 <!-- end of footer code -->
 
